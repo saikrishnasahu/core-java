@@ -1,0 +1,10 @@
+Usage of Protected Member :
+Protected member can be used within the package only.
+
+Inheritance Of Protected Member :
+Protected Member can be inherited to any sub classes.
+
+Note :
+1). Outer class can not be protected.
+2). We can create sub classes to a class which has only protected constructors but
+    we can’t create objects to that class outside the package.

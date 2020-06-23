@@ -1,0 +1,5 @@
+Usage of Public members :
+Public members can be used anywhere.
+
+Inheritance Of Public Members :
+Public members can be inherited to any sub class.

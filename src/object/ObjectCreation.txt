@@ -1,0 +1,75 @@
+It is a basic unit of Object Oriented Programming and represents the real life entities.
+A typical Java program creates many objects, which as you know, interact by invoking methods.
+
+An object consists of :
+State : It is represented by attributes of an object. It also reflects the properties of an object.
+Behavior : It is represented by methods of an object. It also reflects the response of an object with other objects.
+Identity : It gives a unique name to an object and enables one object to interact with other objects.
+
+There are five different ways to create an object in Java:
+
+Java new Operator
+Java Class.newInstance() method
+Java newInstance() method of constructor
+Java Object.clone() method
+Java Object Serialization and Deserialization
+
+Java new Operator
+This is the most popular way to create an object in Java.
+A new operator is also followed by a call to constructor which initializes the new object.
+While we create an object it occupies space in the heap.
+
+Java Class.newInstance() method
+Java Class.newInstance() is the method of Class class.
+The Class class belongs to java.lang package.
+It creates a new instance of the class represented by this Class object.
+It returns the newly created instance of the class.
+
+Java newInstance() method of Constructor class
+Java Constructor class also has a newInstance() method similar to newInstance() method of Class class.
+The newInstance() method belongs to java.lang.reflect.Constructor class.
+Both newInstance() method are known as reflective ways to create object.
+In fact the newInstance() method of Class class internally uses newInstance() method of Constructor class.
+The method returns a new object created by calling the constructor.
+
+Java Object.clone() method
+Java clone() method creates a copy of an existing object.
+It is defined in Object class. It returns clone of this instance.
+The two most important point about clone() method is:
+
+The Cloneable interface must be implement while using clone() method. It is defined in java.lang package.
+The clone() method must be override with other classes.
+When we use clone() method in class, the class must call super.clone() to obtain the cloned object reference.
+
+Java Object Serialization and Deserialization
+A class must implement Serializable interface which belongs to java.io package.
+The Serializable interface does not have any method and field.
+They add special behavior to the class. Marker interface does not used in Java 8. It is replace by Annotations.
+JVM creates a separate space whenever we serialize and deserialize an object. It does not use any constructor to create an object.
+
+Object Serialization
+The ObjectOutputStream class is used to serialize an object.
+The Serialization is a process of converting an object into a sequence of bytes.
+The writeObject() method of ObjectOutputStream class serialize an object and write the specified object to the ObjectOutputStream class.
+
+Object Deserialization
+The process of creating an object from sequence of bytes is called object deserialization.
+The readObject() method of ObjectInputStream class read an object from the ObjectInputStram class and deserialize it.
+
+Concept of cloning in Java
+In OOPs, copying an object means creating a clone of an existing object.
+There are many ways to copy an object; two of them are- copy constructor and cloning.
+There are two types of cloning in Java:
+Shallow cloning
+Deep cloning
+
+Shallow Cloning
+Java uses shallow cloning whenever we use the default implementation of the clone() method.
+The shallow cloning of an object creates a clone of the main object but does not copy the inner objects.
+The inner objects are shared between the original object and its copy.
+A disadvantage of the shallow copy is that the two objects are not independent.
+When we modify the Name object of one Student, it modifies the other Students objects too.
+
+Deep Cloning
+Deep cloning is a fully independent copy of an object.
+So for the deep copy, we need to ensure all the member class also implement the Cloneable interface and override the clone() method of the Object class.

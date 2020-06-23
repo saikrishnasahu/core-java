@@ -1,0 +1,26 @@
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+We have now declared a variable that holds an array of strings.
+To insert values to it, we can use an array literal - place the values in a comma-separated list, inside curly braces:
+
+Access the Elements of an Array
+You access an array element by referring to the index number.
+Note: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.
+
+Change an Array Element
+To change the value of a specific element, refer to the index number.
+
+Array Length
+To find out how many elements an array has, use the length property.
+
+Loop Through an Array
+You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.
+
+Loop Through an Array with For-Each
+There is also a "for-each" loop, which is used exclusively to loop through elements in arraysVarargs.
+The following example outputs all elements in the cars array, using a "for-each" loop.
+
+Multidimensional Arrays
+A multidimensional array is an array containing one or more arraysVarargs.
+To create a two-dimensional array, add each array within its own set of curly braces.
+To access the elements of the myNumbers array, specify two indexes: one for the array, and one for the element inside that array.
+We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes).

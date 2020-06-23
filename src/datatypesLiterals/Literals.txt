@@ -1,0 +1,9 @@
+A literal is a source code representation of a fixed value.
+They are represented directly in the code without any computation.
+Literals can be assigned to any primitive type variable.
+
+byte, int, long, and short can be expressed in decimal(base 10), hexadecimal(base 16) or octal(base 8) number systems.
+Prefix 0 is used to indicate octal, and prefix 0x indicates hexadecimal when using these number systems for literals.
+
+String literals in Java are specified like they are in most other languages by enclosing a sequence of characters between a pair of double quotes.
+String and char types of literals can contain any Unicode characters.

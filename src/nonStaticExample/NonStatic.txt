@@ -1,0 +1,52 @@
+Non-Static variables and Non-Static methods are non-static components of a class.
+These are also called instance components of a class.
+Non-static components are stored inside the object memory.
+Each object will have their own copy of non-static components.
+
+When you trigger >java MainClass, java command divides allocated memory into two parts – stack and heap.
+First java command enters stack for execution. First it loads class MainClass into heap memory.
+Randomly some memory is allocated to MainClass. All static members are loaded into this class memory.
+There is only one static member in MainClass i.e main() method. It is loaded into class memory.
+After loading static members, SIBs are executed. But there is no SIBs in MainClass.
+So, directly java command calls main() method for execution.
+
+main() method enters stack for execution. First statement refers to class A.
+First it checks whether class A is loaded into heap memory or not. If it is not loaded, it loads class A into heap memory.
+Randomly some memory is allocated to class A.
+All static members of class A , ‘staticVariable’ and ‘staticMethod()’ , are loaded into this memory.
+‘staticVariable’ is first initialized with default value 0. No SIBs in Class A.
+So, after loading static members, main() method assigns value 10 to ‘staticVariable’ of class A.
+Second statement of main() method is commented. Because, you can’t refer a non-static members through a class name.
+Because, non-static members are stored inside the object memory. You have to refer them through objects only.
+
+Then it calls staticMethod() of class A. staticMethod() comes to stack for execution.
+First statement prints value of ‘staticVariable’ i. e 10 on the console.
+Second statement is commented. Because, directly you can’t use non-static member inside a static method.
+Because, non-static members are stored inside the object memory. You have to create objects to use them. You have to refer them through objects only.
+No statements left in staticMethod(). So, it leaves the stack memory.
+
+Control comes back to main() method. The next statement is also commented.
+Because, You can’t refer non-static member through a class name. In the next statement, an object of class A type is created.
+Randomly, some memory is allocated to object.
+All non-static members, ‘nonStaticVariable’ and ‘nonStaticMethod()’,  of class A are loaded into this object memory.
+‘nonStaticVariable’ is a global variable, so it is first initialized with default value 0.
+A reference variable of type class A  ‘a1’  is created in main() method. It points to this newly created object.
+
+In the same manner, object ‘a2’ is also created. In the next statement, value of ‘nonStaticVariable’ of ‘a1’ i.e 0 is printed.
+In the next statement, value of ‘staticVariable’ of class A i.e 10 is printed.
+You can refer a static member of a class through object of that class. Whenever you refer a static member through a object,
+compiler replaces object name with its class name like a1.staticVariable is treated as A.staticVariable by the compiler.
+In the next statement, it calls ‘nonStaticMethod()’ of a1.
+‘nonStaticMethod()’ of a1 comes to the stack for execution. First statement prints value of  ‘staticVariable’ of class A i.e 10 on the console.
+Second statement prints the value of ‘nonStaticVariable’ of a1 i.e 0.
+There are no other statements left in ‘nonStaticMethod()’ , so it leaves the stack.
+
+Control comes back to main() method. It calls staticMethod() of class A. ‘staticMethod()’ enters the stack for execution.
+First statement prints value of  ‘staticVariable’  i.e 10 on the console. It leaves the memory after executing this statement.
+
+Control comes back to the main() method. It prints value of ‘staticVariable’ i.e 10 on the console through object a2.
+In the next statement it changes value of ‘staticVariable’ to 20 through a1.
+In the next statement, again it prints the value of ‘staticVariable’ through a2. This time 20 is printed on the console.
+This means changes made to static components through one object is reflected in another object also.
+Because, the same copy of static components is available to all the objects of that class.
+As all statements are executed, first main() method then java command leaves the stack memory.

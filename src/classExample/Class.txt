@@ -1,0 +1,36 @@
+A class is a user defined blueprint or prototype from which objects are created.
+It represents the set of properties or methods that are common to all objects of one type.
+In general, class declarations can include these components, in order:
+
+Modifiers : A class can be public or has default access (Refer this for details).
+Class name: The name should begin with a initial letter (capitalized by convention).
+Superclass(if any): The name of the class’s parent (superclass), if any, preceded by the keyword extends.
+A class can only extend (subclass) one parent.
+Interfaces(if any): A comma-separated list of interfaces implemented by the class, if any, preceded by the keyword implements.
+A class can implement more than one interface.
+Body: The class body surrounded by braces, { }.
+Constructors are used for initializing new objects.
+Fields are variables that provides the state of the class and its objects, and methods are used to implement the behavior of the class and its objects.
+
+Types of classes in Java
+
+Concrete class
+Any normal class which does not have any abstract method or a class that has an implementation of all the methods
+of its parent class or interface and its own methods is a concrete class.
+
+Abstract class
+A class declared with abstract keyword and have zero or more abstract methods are known as abstract class.
+The abstract classes are incomplete classes, therefore, to use we strictly need to extend the abstract classes to a concrete class.
+
+Final class
+A class declared with the final keyword is a final class and it cannot be extended by another class, for example, java.lang.System class.
+
+POJO class
+A class that contains only private variables and setter and getter methods to use those variables is called POJO (Plain Old Java Object) class.
+It is a fully encapsulated class.
+
+Static class
+Static classes are nested classes means a class declared within another class as a static member is called a static class.
+
+Inner Class
+A class declared within another class or method is called an inner class.

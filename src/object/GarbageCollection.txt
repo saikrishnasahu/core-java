@@ -1,0 +1,51 @@
+In C/C++, programmer is responsible for both creation and destruction of objects.
+Usually programmer neglects destruction of useless objects.
+Due to this negligence, at certain point, for creation of new objects,
+sufficient memory may not be available and entire program will terminate abnormally causing OutOfMemoryErrors.
+
+But in Java, the programmer need not to care for all those objects which are no longer in use.
+Garbage collector destroys these objects.
+Garbage collector is best example of Daemon thread as it is always running in background.
+Main objective of Garbage Collector is to free heap memory by destroying unreachable objects.
+
+Important terms :
+
+Unreachable objects : An object is said to be unreachable iff it doesn’t contain any reference to it.
+Also note that objects which are part of island of isolation are also unreachable.
+
+Eligibility for garbage collection : An object is said to be eligible for GC(garbage collection) iff it is unreachable.
+Even though the programmer is not responsible to destroy useless objects but it is highly recommended
+to make an object unreachable(thus eligible for GC) if it is no longer required.
+
+There are generally four different ways to make an object eligible for garbage collection.
+Nullifying the reference variable
+Re-assigning the reference variable
+Object created inside method
+Island of Isolation
+
+Ways for requesting JVM to run Garbage Collector
+Once we made object eligible for garbage collection, it may not destroy immediately by the garbage collector.
+Whenever JVM runs the Garbage Collector program, then only the object will be destroyed.
+But when JVM runs Garbage Collector, we can not expect.
+
+We can also request JVM to run Garbage Collector. There are two ways to do it :
+Using System.gc() method : System class contain static method gc() for requesting JVM to run Garbage Collector.
+Using Runtime.getRuntime().gc() method : Runtime class allows the application to interface with the JVM in which the application is running.
+Hence by using its gc() method, we can request JVM to run Garbage Collector.
+
+Note:There is no guarantee that any one of above two methods will definitely run Garbage Collector.
+The call System.gc() is effectively equivalent to the call : Runtime.getRuntime().gc()
+
+Finalization
+Just before destroying an object, Garbage Collector calls finalize() method on the object to perform cleanup activities.
+Once finalize() method completes, Garbage Collector destroys that object.
+finalize() method is present in Object class with following prototype.
+protected void finalize() throws Throwable
+Based on our requirement, we can override finalize() method for perform our cleanup activities like closing connection from database.
+
+Note :
+The finalize() method called by Garbage Collector not JVM. Although Garbage Collector is one of the module of JVM.
+Object class finalize() method has empty implementation,
+thus it is recommended to override finalize() method to dispose of system resources or to perform other cleanup.
+The finalize() method is never invoked more than once for any given object.
+If an uncaught exception is thrown by the finalize() method, the exception is ignored and finalization of that object terminates.

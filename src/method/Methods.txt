@@ -1,0 +1,35 @@
+A method is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a method.
+Methods are used to perform certain actions, and they are also known as functions.
+Why use methods? To reuse code: define the code once, and use it many times.
+
+Create a Method
+A method must be declared within a class. It is defined with the name of the method, followed by parentheses ().
+Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions.
+
+Call a Method
+To call a method in Java, write the method's name followed by two parentheses () and a semicolon;
+In the following example, myMethod() is used to print a text (the action), when it is called.
+
+Parameters and Arguments
+Information can be passed to methods as parameter. Parameters act as variables inside the method.
+Parameters are specified after the method name, inside the parentheses.
+You can add as many parameters as you want, just separate them with a comma.
+When a parameter is passed to the method, it is called an argument.
+
+Multiple Parameters
+Note that when you are working with multiple parameters,
+the method call must have the same number of arguments as there are parameters, and the arguments must be passed in the same order.
+
+Return Values
+The void keyword, used in the examples above, indicates that the method should not return a value.
+If you want the method to return a value, you can use a primitive data type (such as int, char, etc.) instead of void,
+and use the return keyword inside the method.
+
+A Method with If...Else
+It is common to use if...else statements inside methods.
+
+Method Overloading
+With method overloading, multiple methods can have the same name with different parameters.
+Instead of defining two methods that should do the same thing, it is better to overload one.
+Note: Multiple methods can have the same name as long as the number and/or type of parameters are different.

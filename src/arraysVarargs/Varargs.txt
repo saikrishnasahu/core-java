@@ -1,0 +1,17 @@
+In JDK 5, Java has included a feature that simplifies the creation of methods that need to take a variable number of arguments.
+This feature is called varargs and it is short-form for variable-length arguments.
+A method that takes a variable number of arguments is a varargs method.
+Prior to JDK 5, variable-length arguments could be handled two ways.
+One using overloaded method(one for each) and another put the arguments into an array, and then pass this array to the method.
+Both of them are potentially error-prone and require more code. The varargs feature offers a simpler, better option.
+
+The … syntax tells the compiler that varargs has been used and these arguments should be stored in the array.
+The variable is operated on as an array.
+Note: A method can have variable length parameters with other parameters too,
+but one should ensure that there exists only one varargs parameter that should be written last in the parameter list of the method declaration.
+
+Important points:
+Vararg Methods can also be overloaded but overloading may lead to ambiguity.
+Prior to JDK 5, variable length arguments could be handled into two ways : One was using overloading, other was using array argument.
+There can be only one variable argument in a method.
+Variable argument (varargs) must be the last argument.

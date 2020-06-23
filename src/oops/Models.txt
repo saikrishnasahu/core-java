@@ -1,0 +1,32 @@
+Intention of object oriented modeling and design is to learn how to apply object -oriented concepts
+to all the stages of the software development life cycle.Object-oriented modeling and design is a way of thinking about problems
+using models organized around real world concepts. The fundamental construct is the object, which combines both data structure and behavior.
+
+Purpose of Models:
+Testing a physical entity before building it
+Communication with customers
+Visualization
+Reduction of complexity
+
+Types of Models:
+There are 3 types of models in the object oriented modeling and design are: Class Model, State Model, and Interaction Model.
+These are explained as following below.
+
+Class Model:
+The class model shows all the classes present in the system. The class model shows the attributes and the behavior associated with the objects.
+The class diagram is used to show the class model.
+The class diagram shows the class name followed by the attributes followed by the functions or the methods
+that are associated with the object of the class.Goal in constructing class model is to capture those concepts from the real world
+that are important to an application.
+
+State Model:
+State model describes those aspects of objects concerned with time and the sequencing of operations –
+events that mark changes, states that define the context for events, and the organization of events and states.
+Actions and events in a state diagram become operations on objects in the class model. State diagram describes the state model.
+
+Interaction Model:
+Interaction model is used to show the various interactions between objects, how the objects collaborate to achieve the behavior of the system as a whole.
+The following diagrams are used to show the interaction model:
+Use Case Diagram
+Sequence Diagram
+Activity Diagram

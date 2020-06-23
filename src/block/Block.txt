@@ -1,0 +1,31 @@
+Static Initialization Block (SIB)
+
+Unlike C++, Java supports a special block, called static block (also called static clause) which can be used for static initializations of a class.
+This code inside static block is executed only once, the first time the class is loaded into memory.
+Also, static blocks are executed before constructors.
+
+Instance Initialization Block (IIB)
+
+In a Java program, operations can be performed on methods, constructors and initialization blocks.
+Instance Initialization Blocks or IIB are used to initialize instance variables.
+IIBs are executed before constructors.
+They run each time when object of the class is created.
+
+Initialization blocks are executed whenever the class is initialized and before constructors are invoked.
+They are typically placed above the constructors within braces.
+It is not at all necessary to include them in your classes.
+
+Multiple Instance Initialization Blocks in a Program
+We can also have multiple IIBs in a single class.
+If compiler finds multiple IIBs, then they all are executed from top to bottom i.e. the IIB which is written at top will be executed first.
+
+Instance Initialization Block with parent class
+You can have IIBs in parent class also.
+Instance initialization block code runs immediately after the call to super() in a constructor.
+The compiler executes parents class’s IIB before executing current class’s IIBs.
+
+
+Important points:
+Instance Initialization Blocks run every time a new instance is created.
+Initialization Blocks run in the order they appear in the program
+The Instance Initialization Block is invoked after the parent class constructor is invoked (i.e. after super() constructor call)

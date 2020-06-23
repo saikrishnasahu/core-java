@@ -1,0 +1,18 @@
+In Java, every application begins with a class name, and that class must match the filename.
+Let's create our initial Java file, called MyClass.java, which can be done in any text editor.
+The file should contain a "Hello World!" message, which is written with the code as shown in MyClass.java.
+Save the code in Notepad as "MyClass.java".
+Open Command Prompt (cmd.exe), navigate to the directory where you saved your file.
+Type "javac MyClass.java":
+
+javac MyClass.java
+
+This will compile your code.
+If there are no errors in the code, the command prompt will take you to the next line.
+Type "java MyClass" to run the file:
+
+java MyClass
+
+The output should read:
+
+Hello World!

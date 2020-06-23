@@ -1,0 +1,64 @@
+Decision Making in programming is similar to decision making in real life.
+In programming also we face some situations where we want a certain block of code to be executed when some condition is fulfilled.
+A programming language uses control statements to control the flow of execution of program based on certain conditions.
+These  are used to cause the flow of execution to advance and branch based on changes to the state of a program.
+Java’s Selection statements:
+
+if
+if-else
+nested-if
+if-else-if
+switch-case
+jump – break, continue, return
+These statements allow you to control the flow of your program’s execution based upon conditions known only during run time.
+
+if: if statement is the most simple decision making statement.
+It is used to decide whether a certain statement or block of statements will be executed or not
+i.e if a certain condition is true then a block of statement is executed otherwise not.
+Here, condition after evaluation will be either true or false.
+if statement accepts boolean values – if the value is true then it will execute the block of statements under it.
+If we do not provide the curly braces ‘{‘ and ‘}’ after if( condition ) then by default if statement will consider
+the immediate one statement to be inside its block.
+
+if-else: The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won’t.
+But what if we want to do something else if the condition is false. Here comes the else statement.
+We can use the else statement with if statement to execute a block of code when the condition is false.
+
+nested-if: A nested if is an if statement that is the target of another if or else. Nested if statements means an if statement inside an if statement.
+Yes, java allows us to nest if statements within if statements. i.e, we can place an if statement inside another if statement.
+
+if-else-if ladder: Here, a user can decide among multiple options.
+The if statements are executed from the top down.
+As soon as one of the conditions controlling the if is true, the statement associated with that if is executed, and the rest of the ladder is bypassed.
+If none of the conditions is true, then the final else statement will be executed.
+
+switch-case: The switch statement is a multi way branch statement.
+It provides an easy way to dispatch execution to different parts of code based on the value of the expression.
+Expression can be of type byte, short, int char or an enumeration. Beginning with JDK7, expression can also be of type String.
+Duplicate case values are not allowed.
+The default statement is optional.
+The break statement is used inside the switch to terminate a statement sequence.
+The break statement is optional. If omitted, execution will continue on into the next case.
+
+jump: Java supports three jump statement: break, continue and return. These three statements transfer control to other part of the program.
+
+Break: In Java, break is majorly used for:
+Terminate a sequence in a switch statement (discussed above).
+To exit a loop.
+Used as a “civilized” form of goto.
+
+Using break to exit a Loop
+Using break, we can force immediate termination of a loop, bypassing the conditional expression and any remaining code in the body of the loop.
+Note: Break, when used inside a set of nested loops, will only break out of the innermost loop.
+
+Using break as a Form of Goto
+Java does not have a goto statement because it provides a way to branch in an arbitrary and unstructured manner.
+Java uses label. A Label is use to identifies a block of code.
+Now, break statement can be use to jump out of target block.
+Note: You cannot break to any label which is not defined for an enclosing block.
+
+Continue: Sometimes it is useful to force an early iteration of a loop. That is, you might want to continue running the loop
+but stop processing the remainder of the code in its body for this particular iteration.
+This is, in effect, a goto just past the body of the loop, to the loop’s end. The continue statement performs such an action.
+
+Return:The return statement is used to explicitly return from a method. That is, it causes a program control to transfer back to the caller of the method.

@@ -1,0 +1,19 @@
+Understanding of MyClass.java
+
+Every line of code that runs in Java must be inside a class. In our example, we named the class MyClass.
+
+The name of the java file must match the class name.
+When saving the file, save it using the class name and add ".java" to the end of the filename.
+
+The main Method
+The main() method is required and you will see it in every Java program:
+
+public static void main(String[] args)
+Any code inside the main() method will be executed. You don't have to understand the keywords before and after main.
+You will get to know them bit by bit.
+
+For now, just remember that every Java program has a class name which must match the filename, and that every program must contain the main() method.
+
+System.out.println()
+Inside the main() method, we can use the println() method to print a line of text to the screen.
+Inside the main() method, we can use the println() method to print a line of text to the screen.
